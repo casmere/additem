@@ -23,6 +23,12 @@
 	<form>
 		<fieldset>
 			<legend>Select Category: </legend>
+				<select>
+					<option value="home">Home</option>
+					<option value="school">School</option>
+					<option value="fun">For Fun</option>
+					<option value="dateNight">Date Night</option>
+				</select>
 		</fieldset> 
 	</form>
 		
@@ -31,11 +37,19 @@
 	<form>
 		<fieldset>
 			<legend>Item Info: </legend>
-				Name:<br /> <input type="text" name="firstname" /><br />
-				Quantity:<br /><input type="range" name="quantity" /><br />
-				Boolean:<br /><input type="checkbox" name="name" value="item1"><br />
-				Do by:<br /><input type="text" name="do_by" /><br />
-				Notes:<br /><input type="text" name="notes" /><br />
+				<label for="name">Name:</label><br />
+					<input type="text" name="firstname" /><br />
+				<label for="quantity">Quantity:</label><br />
+					<input type="range" name="quantity" /><br />
+				<label for="priority">Priority:</label><br />
+					Yes: <input type="checkbox" name="yes" value="yes"><br />
+					No: <input type="checkbox" name="no" value="no"><br />
+				<label for="date">Date:</label><br />
+					<input type="date" name="do_by" /><br />
+				<label for="notes">Notes:</label><br />
+					<textarea rows="2" cols="30"></textarea><br />
+					
+				<input type="submit" value="Submit" />
 		</fieldset>
 	</form>
 	
