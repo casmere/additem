@@ -18,42 +18,44 @@
 	</head>
 	
 <body>
-	<h1>Add Item</h1>
-	
-	<form>
-		<fieldset>
-			<legend>Select Category: </legend>
-				<select>
-					<option value="home">Home</option>
-					<option value="school">School</option>
-					<option value="fun">For Fun</option>
-					<option value="dateNight">Date Night</option>
-				</select>
-		</fieldset> 
-	</form>
+	<div id="container">
+		<h1>Add Item</h1>
 		
-	
+		<form>
+			<fieldset>
+				<legend>Select Category: </legend>
+					<select>
+						<option value="home">Home</option>
+						<option value="school">School</option>
+						<option value="fun">For Fun</option>
+						<option value="dateNight">Date Night</option>
+					</select>
+			</fieldset> 
 		
-	<form>
-		<fieldset>
-			<legend>Item Info: </legend>
-				<ul>
-					<li><label for="name">Name:</label></li>
-					<li><input type="text" name="firstname" /></li>
-					<li><label for="quantity">Quantity:</label></li>
-					<li><input type="range" name="quantity" /></li>
-					<li><label for="priority">Priority:</label></li>
-					<li>Yes: <input type="checkbox" name="yes" value="yes"></li>
-					<li>No: <input type="checkbox" name="no" value="no"></li>
-					<li><label for="date">Date:</label></li>					
-					<li><input type="date" name="do_by" /></li>
-					<li><label for="notes">Notes:</label></li>
-					<li><textarea rows="2" cols="30"></textarea></li>						
-					<li><input type="submit" value="Submit" /></li>
-				</ul>
-		</fieldset>
-	</form>
-	
+			<fieldset>
+				<legend>Item Info: </legend>
+					<ul>
+						<li><label for="name">Name:</label>
+						<input type="text" name="firstname" /></li>
+						
+						<li><label for="quantity">Quantity:</label>
+						<input type="range" name="quantity" /></li>
+						
+						<li><label for="priority">Priority:</label>
+						Yes: <input type="checkbox" name="yes" value="yes">
+						No:  <input type="checkbox" name="no" value="no"></li>
+						
+						<li><label for="date">Date:</label></li>					
+						<li><input type="date" name="do_by" />
+						
+						<li><label for="notes">Notes:</label></li>
+						<li><textarea rows="2" cols="30"></textarea></li>					
+						
+						<li><input type="submit" value="Submit" /></li>
+					</ul>
+			</fieldset>
+		</form>
+	</div>
 </body>
 	
 </html>
