@@ -1,20 +1,45 @@
-body {
-	background-color: #fff983 
+/*
+	Project 2
+	VFW 1108 
+	Scott C. Shamka
+	
+margin
+padding
+border
+width
+height
+color
+background-color
+font-family (you can do shorthand if you wish using font)
+font-weight
+font-style
+line-height
+text-align
+text-decoration
+text-transform
+display
+
+    h1
+    fieldset
+    legend
+    label
+    input
+    textarea
+    select
+    a
+
+
+*/
+
+
+#container{
+	width: auto;
 }
-div#container{
 
-	background-color: aqua;
+li{
+	list-style-type: none;
 }
-h1 {
 
-
-	background-color: transparent;
-
-
-	color: #b5c5ff;
-
-
-	font-weight: bold;
-
-
+label {
+	display: block;
 }
