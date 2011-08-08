@@ -19,10 +19,13 @@
 	
 <body>
 	<div id="container">
-		<h1>Add Item</h1>
+		
+		<div id="header">
+			<h1>Add Item</h1>
+		</div>
 		
 		<form>
-			<fieldset>
+			<fieldset id="category">
 				<legend>Select Category: </legend>
 					<select>
 						<option value="home">Home</option>
@@ -32,26 +35,28 @@
 					</select>
 			</fieldset> 
 		
-			<fieldset>
+			<fieldset id="info">
 				<legend>Item Info: </legend>
 					<ul>
-						<li><label for="name">Name:</label>
+						<li class="pos_left"><label for="name">Name:</label>
 						<input type="text" name="firstname" /></li>
 						
-						<li><label for="quantity">Quantity:</label>
+						<li class="pos_left"><label for="quantity">Quantity:</label>
 						<input type="range" name="quantity" /></li>
 						
-						<li><label for="priority">Priority:</label>
-						Yes: <input type="checkbox" name="yes" value="yes">
-						No:  <input type="checkbox" name="no" value="no"></li>
+						<li class="pos_left"><label for="priority">Priority:</label>
+						<ul>
+							<li>Yes: <input type="checkbox" name="yes" value="yes"></li>
+							<li>No:  <input type="checkbox" name="no" value="no"></li>
+						</ul>
 						
-						<li><label for="date">Date:</label></li>					
-						<li><input type="date" name="do_by" />
+						<li class="pos_left"><label for="date">Date:</label></li>					
+						<li class="pos_left"><input type="date" name="do_by" />
 						
-						<li><label for="notes">Notes:</label></li>
-						<li><textarea rows="2" cols="30"></textarea></li>					
+						<li class="pos_left"><label for="notes">Notes:</label></li>
+						<li class="pos_left"><textarea rows="2" cols="30"></textarea></li>					
 						
-						<li><input type="submit" value="Submit" /></li>
+						<li class="pos_left"><input type="submit" value="Submit" /></li>
 					</ul>
 			</fieldset>
 		</form>

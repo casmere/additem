@@ -3,21 +3,7 @@
 	VFW 1108 
 	Scott C. Shamka
 	
-margin
-padding
-border
-width
-height
-color
-background-color
-font-family (you can do shorthand if you wish using font)
-font-weight
-font-style
-line-height
-text-align
-text-decoration
-text-transform
-display
+	text-decoration
 
     h1
     fieldset
@@ -30,16 +16,75 @@ display
 
 
 */
+a{
 
+}
 
 #container{
-	width: auto;
+	width: 320px;
+	background-color: #b6b6b6;
+}
+
+#header{
+	background-color: gray;
+	height: 50px;
+	margin-bottom: 5px;
+	
+}
+h1{
+	color: #b6b6b6;
+	font-family: "Arial Black";
+	padding-bottom: 10px;
+	padding-left: 17px;
+}
+
+form{
+	margin-top: -5px;
+
+	
+}
+
+fieldset{
+	border: none;
+	font-weight: bold;
+	text-align: left;
+}
+
+#category{
+	
 }
 
 li{
 	list-style-type: none;
+	
+}
+
+li.pos_left{
+	position: relative;
+	left: -40px;
 }
 
 label {
 	display: block;
 }
+
+legend{
+	line-height: 1.5em;
+}
+
+label{
+	font-style: oblique;
+}
+
+input{
+	
+}
+
+textarea{
+	height: 100px;
+}
+
+select{
+	text-transform: uppercase;
+}
+
