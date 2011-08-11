@@ -1,14 +1,15 @@
 // Week 2 - VFW
 // Term 1108
 // Scott C. Shamka
+
 function getItems(){
 	if(localStorage.getItem('name')){
-		var name = localStorage.getItem('appName')
-		var category = localStorage.getItem('appCategory')
-		var quantity = localStorage.getItem('appQuantity')
-		var priority = localStorage.getItem('appPriority')
-		var date = localStorage.getItem('appDate')
-		var notes = localStorage.getItem('appNotes')
+		var name = localStorage.getItem('appName');
+		var category = localStorage.getItem('appCategory');
+		var quantity = localStorage.getItem('appQuantity');
+		var priority = localStorage.getItem('appPriority');
+		var date = localStorage.getItem('appDate');
+		var notes = localStorage.getItem('appNotes');
 		
 		var data = [
 		
@@ -21,10 +22,11 @@ function getItems(){
 		
 		];
 		
-		alert(data);
+		alert("Something", data);
 	
 	}
 }
+
 function storeItems(id){
 	var name = document.getElementsByName('name').value;
 	var category = document.getElementsByName('category').value;

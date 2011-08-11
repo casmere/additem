@@ -11,6 +11,8 @@
 		<!--Char set Meta-->
 		<meta charset="utf-8">
 		<link rel="stylesheet" href="css/style.css" type="text/css" />
+		<link href="js/javascript.js" type="text/javascript" />
+		
 		<!--Page Title-->
 		<title>Add Item</title>
 		
@@ -24,7 +26,7 @@
 			<h1>Add Item</h1>
 		</div>
 		
-		<form>
+		<form onsubmit="storeItems()">
 			<fieldset id="category">
 				<legend>Select Category: </legend>
 					<select>
@@ -57,8 +59,10 @@
 					</ul>
 			</fieldset>
 		</form>
-		<p id="clear">Clear Local Storage</p>
+		<p id="clear"><a>Clear Local Storage</a></p>
 	</div>
+
+<script>getItems();</script>
 </body>
 	
 </html>
