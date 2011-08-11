@@ -17,12 +17,16 @@
 
 */
 a{
-
+	text-decoration: none;
 }
 
 #container{
 	width: 320px;
 	background-color: #b6b6b6;
+}
+
+#clear{
+	display: none;
 }
 
 #header{
