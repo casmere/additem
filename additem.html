@@ -10,30 +10,28 @@
 		
 		<!--Char set Meta-->
 		<meta charset="utf-8">
+		
+		<!-- <meta name="viewport" --> 
+		
 		<link rel="stylesheet" href="css/style.css" type="text/css" />
-		<link href="js/javascript.js" type="text/javascript" />
+		<script src="js/javascript.js" type="text/javascript"></script>
 		
 		<!--Page Title-->
 		<title>Add Item</title>
-		
-		
+
 	</head>
 	
-<body>
+<body onload="addOption_list()">
 	<div id="container">
 		
 		<div id="header">
 			<h1>Add Item</h1>
 		</div>
 		
-		<form onsubmit="storeItems()">
-			<fieldset id="category">
+		<form name="addItem">
+			<fieldset>
 				<legend>Select Category: </legend>
-					<select>
-						<option value="home">Home</option>
-						<option value="school">School</option>
-						<option value="fun">For Fun</option>
-						<option value="dateNight">Date Night</option>
+					<select name="category_list" id="category">					
 					</select>
 			</fieldset> 
 		
@@ -41,28 +39,30 @@
 				<legend>Item Info: </legend>
 					<ul>
 						<li class="pos_left"><label for="name">Name:</label>
-						<input type="text" name="name" /></li>
+						<input type="text" id="name" /></li>
 						
-						<li class="pos_left"><label for="quantity">Quantity:</label>
-						<input type="range" name="quantity" /></li>
+						<li class="pos_left"><label for="quantity">Quantity (1 - 10):</label>
+						<input type="range" min = 1 max= 10 id="quantity" /></li>
 						
 						<li class="pos_left"><label for="priority">Priority:</label>
-						<input type="checkbox" name="priority" value="priority"></li>
+						<input type="checkbox" id="priority" value="priority"></li>
 						
 						<li class="pos_left"><label for="date">Date:</label></li>					
-						<li class="pos_left"><input type="date" name="do_by" />
+						<li class="pos_left"><input type="date" id="date" />
 						
 						<li class="pos_left"><label for="notes">Notes:</label></li>
-						<li class="pos_left"><textarea rows="2" cols="30"></textarea></li>					
+						<li class="pos_left"><textarea rows="2" cols="30" id="notes"></textarea></li>					
 						
-						<li class="pos_left"><input type="submit" value="Submit" /></li>
+						<li class="pos_left"><input type="submit" value="Submit" onClick="storeItems()" /></li>
 					</ul>
 			</fieldset>
 		</form>
-		<p id="clear"><a>Clear Local Storage</a></p>
 	</div>
 
-<script>getItems();</script>
+	<p id="clear"><a href="#" onClick="clearLocal(); location.reload();">Clear Local Storage</a></p>
+	
+	<script src="js/javascript.js"></script>
+	<script>getItems();</script>
 </body>
 	
 </html>
