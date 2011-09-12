@@ -28,7 +28,7 @@
 			<h1>Add Item</h1>
 		</div>
 		
-		<form name="addItem">
+		<form name="addItem" action="#" method="post" onSubmit="storeItems()">
 			<fieldset>
 				<legend>Select Category: </legend>
 					<select name="category_list" id="category">					
@@ -53,7 +53,7 @@
 						<li class="pos_left"><label for="notes">Notes:</label></li>
 						<li class="pos_left"><textarea rows="2" cols="30" id="notes"></textarea></li>					
 						
-						<li class="pos_left"><input type="submit" value="Submit" onClick="storeItems()" /></li>
+						<li class="pos_left"><input type="submit" value="Submit" /></li>
 					</ul>
 			</fieldset>
 		</form>
@@ -61,8 +61,7 @@
 
 	<p id="clear"><a href="#" onClick="clearLocal(); location.reload();">Clear Local Storage</a></p>
 	
-	<script src="js/javascript.js"></script>
-	<script>getItems();</script>
+	<script type="text/javascript" src="js/main.js"></script>
 </body>
 	
 </html>
