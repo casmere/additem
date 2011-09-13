@@ -14,21 +14,21 @@
 		<!-- <meta name="viewport" --> 
 		
 		<link rel="stylesheet" href="css/style.css" type="text/css" />
-		<script src="js/javascript.js" type="text/javascript"></script>
 		
 		<!--Page Title-->
 		<title>Add Item</title>
 
 	</head>
 	
-<body onload="addOption_list()">
+<body>
 	<div id="container">
 		
 		<div id="header">
 			<h1>Add Item</h1>
 		</div>
 		
-		<form name="addItem" action="#" method="post" onSubmit="storeItems()">
+		<form name="addItem" action="#" method="post" onSubmit="saveData();">
+			
 			<fieldset>
 				<legend>Select Category: </legend>
 					<select name="category_list" id="category">					
@@ -59,9 +59,12 @@
 		</form>
 	</div>
 
-	<p id="clear"><a href="#" onClick="clearLocal(); location.reload();">Clear Local Storage</a></p>
+	<p id="clear">
+		<a href="#" onClick="clearLocal(); location.reload();">Clear Local Storage</a>
+	</p>
 	
 	<script type="text/javascript" src="js/main.js"></script>
+	<script>getItems();</script>
 </body>
 	
 </html>
