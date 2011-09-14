@@ -32,14 +32,8 @@ function getItems(){
 			notes
 		
 		];
-		
-		alert(data);
-		
-		document.getElementById('container').style.display = "none";
 	
-		var clearLink = document.getElementById('clear');
-			clearLink.style.display = "block";
-
+	showData(data);
 		
 	} else {
 	
@@ -51,6 +45,18 @@ function getItems(){
 		document.getElementById('appDate') = date;
 		document.getElementById('appNotes') = notes;
 	}
+}
+
+function showData(data){
+
+	
+		alert(data);
+		
+		document.getElementById('form1').style.display = "none";
+	
+		var clearLink = document.getElementById('clear');
+			clearLink.style.display = "block";
+
 }
 
 function saveData(id){

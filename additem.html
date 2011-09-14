@@ -27,7 +27,7 @@
 			<h1>Add Item</h1>
 		</div>
 		
-		<form name="addItem" action="#" method="post" onSubmit="saveData();">
+		<form name="addItem" action="#" method="post" id="form1" onSubmit="saveData();">
 			
 			<fieldset>
 				<legend>Select Category: </legend>
@@ -57,6 +57,17 @@
 					</ul>
 			</fieldset>
 		</form>
+	</div>
+	
+	<div id="showData">
+		<ul>
+			<li id="categoryData"></li>
+			<li id="nameData"></li>
+			<li id="quantityData"></li>
+			<li id="priority"></li>
+			<li id="dateData"></li>
+			<li id="notesData"></li>
+		</ul>
 	</div>
 
 	<p id="clear">
