@@ -2,8 +2,8 @@
 // Term 1108
 // Scott C. Shamka
 
-var clearLink = document.getElementById('clear');
-var anchorTags = clearLink.getElementsByTagName('a');
+var clearLink 	= document.getElementById('clear');
+var anchorTags 	= clearLink.getElementsByTagName('a');
 
 // Execute several functions after the DOM is completely loaded.
 window.onload = startUp();
@@ -11,6 +11,10 @@ window.onload = startUp();
 function startUp(){
 	addOption_list(); // Populates the Select Category List
 	document.getElementById('category').focus();
+}
+
+function formSubmit(){
+	saveData();
 }
 
 function getItems(){
@@ -23,9 +27,9 @@ function getItems(){
 		var notes 		= localStorage.getItem('appNotes');
 		
 		var data = [
-		
+			
+			category,		
 			name,
-			category,
 			quantity,
 			priority,
 			date,
@@ -54,18 +58,26 @@ function showData(data){
 		
 		document.getElementById('form1').style.display = "none";
 	
-		var clearLink = document.getElementById('clear');
-			clearLink.style.display = "block";
+		var showData = document.getElementById('showData');
+			showData.style.display = "block";
+			
+		var dataList = document.getElementById('dataList'); // Accessing the unordered list Node
+		var newListElement = document.createElement('li'); 	// Creating a "floating" list element
+			dataList.appendChild(newListElement); 			// Attaching the list element to the UL node
+			
+		
+			
+			
 
 }
 
 function saveData(id){
-	var name = document.getElementById('name').value;
-	var category = document.getElementById('category').value;
-	var quantity= document.getElementById('quantity').value;
-	var priority = document.getElementById('priority').value;
-	var date = document.getElementById('date').value;
-	var notes = document.getElementById('notes').value;
+	var name 		= document.getElementById('name').value;
+	var category 	= document.getElementById('category').value;
+	var quantity	= document.getElementById('quantity').value;
+	var priority 	= document.getElementById('priority').value;
+	var date 		= document.getElementById('date').value;
+	var notes	 	= document.getElementById('notes').value;
 	
 	localStorage.setItem('appName', name);
 	localStorage.setItem('appCategory', category);

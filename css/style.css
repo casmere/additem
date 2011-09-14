@@ -14,7 +14,7 @@ a{
 }
 
 #clear{
-	display: none;
+	/* display: none; */
 }
 
 #header{
@@ -23,6 +23,13 @@ a{
 	margin-bottom: 5px;
 	
 }
+
+#showData{
+	width: 320px;
+	background-color: #b6b6b6;
+	display: none;
+}
+
 h1{
 	color: #b6b6b6;
 	font-family: "Arial Black";

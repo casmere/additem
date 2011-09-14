@@ -27,7 +27,7 @@
 			<h1>Add Item</h1>
 		</div>
 		
-		<form name="addItem" action="#" method="post" id="form1" onSubmit="saveData();">
+		<form name="addItem" action="#" method="post" id="form1" onSubmit="formSubmit();">
 			
 			<fieldset>
 				<legend>Select Category: </legend>
@@ -60,20 +60,16 @@
 	</div>
 	
 	<div id="showData">
-		<ul>
-			<li id="categoryData"></li>
-			<li id="nameData"></li>
-			<li id="quantityData"></li>
-			<li id="priority"></li>
-			<li id="dateData"></li>
-			<li id="notesData"></li>
-		</ul>
+	
+		<ul id="dataList"></ul>
+		
+		<p id="clear">
+			<a href="#" onClick="clearLocal(); location.reload();">Clear Local Storage</a>
+		</p>
+
 	</div>
 
-	<p id="clear">
-		<a href="#" onClick="clearLocal(); location.reload();">Clear Local Storage</a>
-	</p>
-	
+		
 	<script type="text/javascript" src="js/main.js"></script>
 	<script>getItems();</script>
 </body>
