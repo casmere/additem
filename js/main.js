@@ -22,7 +22,6 @@ function getItems(){
 		var name 		= localStorage.getItem('appName');
 		var category 	= localStorage.getItem('appCategory');
 		var quantity 	= localStorage.getItem('appQuantity');
-		var priority 	= localStorage.getItem('appPriority');
 		var date 		= localStorage.getItem('appDate');
 		var notes 		= localStorage.getItem('appNotes');
 		
@@ -31,7 +30,6 @@ function getItems(){
 			category,		
 			name,
 			quantity,
-			priority,
 			date,
 			notes
 		
@@ -62,27 +60,30 @@ function showData(data){
 			showData.style.display = "block";
 			
 		var dataList = document.getElementById('dataList'); // Accessing the unordered list Node
-		var newListElement = document.createElement('li'); 	// Creating a "floating" list element
-			dataList.appendChild(newListElement); 			// Attaching the list element to the UL node
-			
 		
+			 						
+		// Loop through the data array and list each piece of the array into an array element.
+		for(var i = 0;i < data.length;i++){
+		
+			var newListElement = document.createElement('li'); 	// Creating a "floating" list element
+				dataList.appendChild(newListElement); 			// Attaching the list element to the UL node
 			
+			var listData = document.createTextNode(data[i]);
+				newListElement.appendChild(listData);
 			
-
+		};
 }
 
 function saveData(id){
 	var name 		= document.getElementById('name').value;
 	var category 	= document.getElementById('category').value;
 	var quantity	= document.getElementById('quantity').value;
-	var priority 	= document.getElementById('priority').value;
 	var date 		= document.getElementById('date').value;
 	var notes	 	= document.getElementById('notes').value;
 	
 	localStorage.setItem('appName', name);
 	localStorage.setItem('appCategory', category);
 	localStorage.setItem('appQuantity', quantity);
-	localStorage.setItem('appPriority', priority);
 	localStorage.setItem('appDate', date);
 	localStorage.setItem('appNotes', notes);
 	
