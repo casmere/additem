@@ -50,9 +50,6 @@ function getItems(){
 }
 
 function showData(data){
-
-	
-		alert(data);
 		
 		document.getElementById('form1').style.display = "none";
 	
