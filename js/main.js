@@ -53,10 +53,10 @@ function showData(data){
 		
 		document.getElementById('form1').style.display = "none";
 	
-		var showData = document.getElementById('showData');
+		var showData = document.getElementById('showData'); 
 			showData.style.display = "block";
 			
-		var dataList = document.getElementById('dataList'); // Accessing the unordered list Node
+		var dataList = document.getElementById('dataList'); 	// Accessing the unordered list Node
 		
 			 						
 		// Loop through the data array and list each piece of the array into an array element.
@@ -65,8 +65,8 @@ function showData(data){
 			var newListElement = document.createElement('li'); 	// Creating a "floating" list element
 				dataList.appendChild(newListElement); 			// Attaching the list element to the UL node
 			
-			var listData = document.createTextNode(data[i]);
-				newListElement.appendChild(listData);
+			var listData = document.createTextNode(data[i]);	// Creates a text node for each piece of the array
+				newListElement.appendChild(listData);			// Attaches the text node to the li element
 			
 		};
 }
@@ -84,6 +84,7 @@ function saveData(id){
 	localStorage.setItem('appDate', date);
 	localStorage.setItem('appNotes', notes);
 	
+	getItems();
 	}
 
 function clearLocal(){
@@ -104,6 +105,23 @@ function addOption_list(selectbox){
 		for (var i=0; i < forList.length;++i){
 
 	addOption(document.addItem.category_list, forList[i], forList[i]);
+		}
 }
+
+function validateForm(){
+	var getName = document.forms[0]['name'].value;
+	if (getName == ""){
+		document.getElementById('name').style.border = "1px solid red";
+		var encourage = prompt("Name, please.", "");
+		if(encourage != null && encourage != ""){
+			document.forms[0]['name'].value = encourage;
+		}
+		return false;
+	} else {
+		document.getElementById('name').style.border = "1px solid #ccc";
+	}
+	
+			alert("Form Submitted!");
+
 }
 		
