@@ -24,7 +24,7 @@
 	<div id="container">
 		
 		<div id="header">
-			<h1>Add Item</h1>
+			<h1>Add An Event</h1>
 		</div>
 		
 		<form name="addItem" action="#" method="post" id="form1" onSubmit="formSubmit();">
@@ -36,13 +36,10 @@
 			</fieldset> 
 		
 			<fieldset id="info">
-				<legend>Item Info: </legend>
+				<legend id="itemInfo">Item Info: </legend>
 					<ul>
-						<li class="pos_left"><label for="name">Name:</label>
-						<input type="text" id="name" /></li>
-						
-						<li class="pos_left"><label for="quantity">Quantity (1 - 10):</label>
-						<input type="range" min = 1 max= 10 id="quantity" /></li>
+						<li class="pos_left"><label for="event">Event Title:</label>
+						<input type="text" id="event" /></li>
 						
 						<li class="pos_left"><label for="date">Date:</label></li>					
 						<li class="pos_left"><input type="date" id="date" />
@@ -67,8 +64,7 @@
 	</div>
 
 		
-	<script type="text/javascript" src="js/main.js"></script>
-<!-- 	<script>getItems();</script> -->
+	<script type="text/javascript" src="js/main1.js"></script>
 </body>
 	
 </html>

@@ -86,4 +86,6 @@ textarea{
 select{
 	text-transform: uppercase;
 }
-
+#itemInfo{
+	display: none;
+}

@@ -10,43 +10,30 @@ window.onload = startUp();
 
 function startUp(){
 	addOption_list(); // Populates the Select Category List
-	document.getElementById('category').focus();
+	document.getElementById('category').focus(); // Focuses on the Category list
 }
 
 function formSubmit(){
-	saveData();
+	validateForm();
 }
 
 function getItems(){
-	if(localStorage.getItem('appName')){
-		var name 		= localStorage.getItem('appName');
+		var event 		= localStorage.getItem('appEvent');
 		var category 	= localStorage.getItem('appCategory');
-		var quantity 	= localStorage.getItem('appQuantity');
 		var date 		= localStorage.getItem('appDate');
 		var notes 		= localStorage.getItem('appNotes');
 		
 		var data = [
 			
 			category,		
-			name,
+			event,
 			quantity,
 			date,
 			notes
 		
 		];
-	
-	showData(data);
 		
-	} else {
-	
-		var name 	= 'enter your name';
-		var date 	= 'date';
-		var notes 	= 'enter any extra notes here!';
-		
-		document.getElementById('appName') = name;
-		document.getElementById('appDate') = date;
-		document.getElementById('appNotes') = notes;
-	}
+		showData(data);
 }
 
 function showData(data){
@@ -72,20 +59,16 @@ function showData(data){
 }
 
 function saveData(id){
-	var name 		= document.getElementById('name').value;
+	var event 		= document.getElementById('event').value;
 	var category 	= document.getElementById('category').value;
-	var quantity	= document.getElementById('quantity').value;
 	var date 		= document.getElementById('date').value;
 	var notes	 	= document.getElementById('notes').value;
 	
-	localStorage.setItem('appName', name);
+	localStorage.setItem('appEvent', event);
 	localStorage.setItem('appCategory', category);
-	localStorage.setItem('appQuantity', quantity);
 	localStorage.setItem('appDate', date);
-	localStorage.setItem('appNotes', notes);
-	
-	getItems();
-	}
+	localStorage.setItem('appNotes', notes);	
+}
 
 function clearLocal(){
 	localStorage.clear();
@@ -109,16 +92,16 @@ function addOption_list(selectbox){
 }
 
 function validateForm(){
-	var getName = document.forms[0]['name'].value;
-	if (getName == ""){
-		document.getElementById('name').style.border = "1px solid red";
-		var encourage = prompt("Name, please.", "");
+	var getEvent = document.forms[0]['event'].value;
+	if (getEvent == ""){
+		document.getElementById('event').style.border = "1px solid red";
+		var encourage = prompt("Event Title, please.", "");
 		if(encourage != null && encourage != ""){
-			document.forms[0]['name'].value = encourage;
+			document.forms[0]['event'].value = encourage;
 		}
 		return false;
 	} else {
-		document.getElementById('name').style.border = "1px solid #ccc";
+		document.getElementById('event').style.border = "1px solid #ccc";
 	}
 	
 			alert("Form Submitted!");
