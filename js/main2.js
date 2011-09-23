@@ -10,10 +10,12 @@ var db = getLocalStorage() || dispError('Local Storage not supported.');
 function startUp(){
 	addOption_list();
 }
+/*
 
 document.getElementById("form1").onSubmit = function () {
 	dbGo();
 }
+*/
 
 function dispError( message ) {
     errorMessage = '<p class="error">' + message + '</p>';
@@ -33,7 +35,6 @@ function dbGo() {
     dispResults();
 }
 
-/*
 function dispResults(){
 	 if(errorMessage) {
 		element('results').innerHTML = errorMessage;
@@ -87,7 +88,6 @@ function dispResults(){
 	};
 
 }
-*/
 
 function addOption(selectbox,text,value)
 {
