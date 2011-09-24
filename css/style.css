@@ -24,12 +24,6 @@ a{
 	
 }
 
-#showData{
-	width: 320px;
-	background-color: #b6b6b6;
-	display: none;
-}
-
 h1{
 	color: #b6b6b6;
 	font-family: "Arial Black";
@@ -47,10 +41,6 @@ fieldset{
 	border: none;
 	font-weight: bold;
 	text-align: left;
-}
-
-#category{
-	
 }
 
 li{
@@ -75,17 +65,14 @@ label{
 	font-style: oblique;
 }
 
-input{
-	
-}
-
 textarea{
 	height: 100px;
 }
 
-select{
-	text-transform: uppercase;
+#editItem{
+	display: none;
 }
+
 #itemInfo{
 	display: none;
 }

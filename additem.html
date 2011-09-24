@@ -31,40 +31,48 @@
 			
 			<fieldset>
 				<legend>Select Category: </legend>
-					<select name="category_list" id="category">					
-					</select>
+					<select name="category_list" id="category"></select>
 			</fieldset> 
 		
 			<fieldset id="info">
 				<legend id="itemInfo">Item Info: </legend>
 					<ul>
-						<li class="pos_left"><label for="event">Event Title:</label>
-						<input type="text" id="event"/></li>
+						<li class="pos_left">
+							<label for="event">Event Title:</label>
+							<input type="text" id="event" name="event" placeholder="Event Title"/>
+						</li>
 						
-						<li class="pos_left"><label for="date">Date:</label></li>					
-						<li class="pos_left"><input type="date" id="date" />
+						<li class="pos_left">
+							<label for="date">Date:</label>
+							<input type="date" id="date" name="date" />
+						</li>
 						
-						<li class="pos_left"><label for="notes">Notes:</label></li>
-						<li class="pos_left"><textarea rows="2" cols="30" id="notes"></textarea></li>					
+						<li class="pos_left">
+							<label for="notes">Notes:</label>
+							<textarea rows="2" cols="30" id="notes" name="notes" placeholder="Please enter any extra info here."></textarea>
+						</li>					
 						
-						<li class="pos_left"><input id="formSubmit" type="submit"/></li>
+						<li class="pos_left">
+							<input type="submit" id="submit" value="Add Event" name="submit"/>
+							<input type="button" id="editItem" value="Edit Event" name="editItem" />
+						</li>
 					</ul>
 			</fieldset>
 		</form>
-	</div>
 	
-	<div id="showData">
+
 	
-		<ul id="dataList"></ul>
+	<div id="dataList"></div>
 		
-		<p id="clear">
-			<a href="#" onClick="clearLocal(); location.reload();">Clear Local Storage</a>
-		</p>
+	<p id="clear">
+		<a href="#" onClick="clearLocal(); location.reload();">Clear Local Storage</a>
+	</p>
 
-	</div>
 
-	
+
+</div>	
 	<script type="text/javascript" src="js/main.js"></script>
+	<script>getItems();</script>
 
 	
 </body>
