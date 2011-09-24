@@ -37,6 +37,10 @@ form{
 	
 }
 
+p{
+	font-family: "Arial Black";
+}
+
 fieldset{
 	border: none;
 	font-weight: bold;

@@ -44,14 +44,23 @@ function getItems(){
 				getListdiv.appendChild(newDiv);
 			}
 				
-			var catImage = "other.png";
-			
-			if(category == "Home"){ catImage = "home.png"; }
-			if(category == "School"){ catImage = "school.jpg"; }
-			if(category == "Work"){ catImage = "work.jpg"; }
-			if(category == "Other"){ catImage = "other.png"; }
-	
-		
+		var catImage;
+				
+		switch(category){
+			case "Home":
+				catImage = "home.png";
+				break;
+			case "School":
+				catImage = "school.jpg";
+				break;
+			case "Work":
+				catImage = "work.jpg"; 
+				break;
+			case "Other":
+				catImage = "other.png";
+				break;
+		}
+
 		//add image
 		var newP = document.createElement("p");
 		var newImg = document.createElement("IMG");
